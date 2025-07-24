@@ -2,25 +2,57 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Leitor de Notícias</title>
-    <!--kit de estilo +_+ -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Metrópoles News Reader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 p-8">
-    <h1 class="text-4xl font-bold text-center mb-8">Leitor de Feed RSS</h1>
-    <div class="bg-white p-6 rounded-lg shadow-md mb-6 text-center">
-        <div class="flex justify-center gap-4">
-            <button id="botaoBuscar" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">
-                1. Buscar e Salvar na Nuvem
-            </button>
-            <!--add botão-->
-            <button id="botaoCarregar" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg">
-                2. Carregar da Nuvem
-            </button>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <span class="close-sidebar" id="closeSidebar">&times;</span>
+                <h2>Pesquisar por categoria</h2>
+            </div>
+            
+            <div class="sidebar-controls">
+                <div class="category-select-group">
+                    <label for="selectCategoria">Selecione a categoria</label>
+                    <select id="selectCategoria" class="input-field"></select>
+                </div>
+                
+                <div class="filter-buttons-group">
+                    <button id="botaoFiltrar" class="button-sidebar-filter">Filtrar</button>
+                    <button id="botaoLimparFiltro" class="button-sidebar-clear">Limpar</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <header class="main-header">
+                <button class="open-sidebar" id="openSidebar">&#9776;</button>
+                <div class="logo-area">
+                    <h1 class="site-title"> <span class="metropoles-text">Metrópoles</span> News</h1>
+                </div>
+                <div class="header-buttons">
+                    <button id="botaoBuscarTodas" class="button-header-primary">Buscar e Salvar Todas</button>
+                    <button id="botaoCarregar" class="button-header-secondary">Carregar na Nuvem</button>
+                </div>
+            </header>
+
+            <div class="main-content-area">
+                <div id="divStatus" class="status-message"></div>
+                <main id="divConteudo" class="news-grid">
+                    <p class="initial-message">Espaço para as notícias</p>
+                </main>
+            </div>
         </div>
     </div>
-    <div id="divStatus" class="text-center my-4 min-h-[2rem]"></div>
-    <main id="divConteudo" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></main>
+
+    <footer>
+        &copy; <span id="currentYear"></span> Metrópoles News Reader. Todos os direitos reservados.
+    </footer>
+
     <script src="index.js"></script>
 </body>
 </html>
