@@ -61,7 +61,7 @@ API em JavaScript/NodeJs, implementada em Docker na AWS, para extrair informaç�
 |   |-- controllers/     # Camada que processa as requisições, chama os serviços e envia as respostas.
 |   |   `-- news.controller.js 
 |   |
-|   |-- routes/          # Define as URLs (endpoints) da API e as conecta aos controllers.
+|   |-- routes/          # rotas
 |   |   `-- news.route.js    
 |   |
 |   `-- services/        # Contém a lógica de negócio principal e a comunicação com serviços externos.
@@ -79,7 +79,7 @@ API em JavaScript/NodeJs, implementada em Docker na AWS, para extrair informaç�
 ---
 ## ✨ Funcionalidades
 
--  - **Extração de Notícias:** Leitura de múltiplos feeds RSS categorizados do portal Metrópoles.
+-  **Extração de Notícias:** Leitura de múltiplos feeds RSS categorizados do portal Metrópoles.
 -   **Armazenamento em Nuvem:** Persistência dos dados extraídos em arquivos `.json` individuais por categoria em um bucket na AWS S3.
 -   **API Robusta:** Exposição de endpoints para buscar/salvar, carregar e listar as categorias de notícias.
 -   **Interface Dinâmica:** Frontend que consome a API para popular um menu de filtros e exibir as notícias de forma organizada.
