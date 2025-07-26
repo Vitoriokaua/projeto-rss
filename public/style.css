@@ -1,20 +1,19 @@
-/* public/style.css */
 
 /* Variáveis CSS para Cores e Espaçamentos */
 :root {
-    --color-metropoles-red: #c32417; /* O vermelho principal do Metrópoles */
-    --color-metropoles-red-dark: #a01d12; /* Vermelho mais escuro para hover */
+    --color-primary-blue: #216ac9; 
+    --color-primary-blue-dark: #1a54a1; /* Um azul um pouco mais escuro para hover */
+
+    --color-sidebar-bg: #2b2b2b; 
+    --color-sidebar-bg-lighter: #3a3a3a; 
+    --color-sidebar-text: #ffffff; 
+    --color-sidebar-text-light: #e0e0e0; 
     
-    --color-sidebar-bg: #2b2b2b; /* Fundo cinza escuro para a sidebar */
-    --color-sidebar-bg-lighter: #3a3a3a; /* Para hover/foco na sidebar */
-    --color-sidebar-text: #ffffff; /* Texto branco na sidebar */
-    --color-sidebar-text-light: #e0e0e0; /* Texto branco levemente esmaecido */
-    
-    --color-main-bg: #f5f5f5; /* Fundo claro da área principal */
-    --color-card-bg: #ffffff; /* Fundo branco dos cards de notícia */
-    --color-text-dark: #333333; /* Cor principal para textos escuros */
-    --color-text-medium: #555555; /* Cor para textos secundários */
-    --color-text-light: #888888; /* Cor para textos mais claros ou detalhes */
+    --color-main-bg: #f5f5f5; 
+    --color-card-bg: #ffffff; 
+    --color-text-dark: #333333; 
+    --color-text-medium: #555555; 
+    --color-text-light: #888888; 
 
     --font-family-sans: 'Inter', sans-serif; /* Fonte padrão do projeto */
     
@@ -59,7 +58,7 @@ body {
 /* Animação de Carregamento */
 .loading-spinner {
     border: 4px solid rgba(0, 0, 0, 0.1);
-    border-left-color: var(--color-metropoles-red);
+    border-left-color: var(--color-primary-blue);
     border-radius: 50%;
     width: 28px;
     height: 28px;
@@ -180,10 +179,7 @@ body {
     flex-grow: 1;
     min-width: 200px;
 }
-.metropoles-logo {
-    height: 48px;
-    vertical-align: middle;
-}
+
 .site-title {
     font-size: 2.8rem;
     font-weight: 800;
@@ -192,8 +188,8 @@ body {
     margin: 0;
     white-space: nowrap;
 }
-.site-title .metropoles-text {
-    color: var(--color-metropoles-red);
+.site-title .brand-text {
+    color: var(--color-primary-blue);
     margin-right: 0.1em;
 }
 
@@ -204,22 +200,6 @@ body {
     flex-wrap: nowrap;
     justify-content: flex-end;
     flex-grow: 1;
-}
-
-/* Estilos Base para Todos os Botões */
-.button-base {
-    font-weight: 600;
-    padding: 0.85rem 1.8rem;
-    border-radius: 0.6rem;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border: none;
-    cursor: pointer;
-    outline: none;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 /* Botões de Ação no Cabeçalho (Buscar e Salvar, Carregar) */
@@ -242,20 +222,20 @@ body {
     border: 1px solid transparent;
     border-radius: 0.4rem;
     box-shadow: none;
-    background-color: var(--color-metropoles-red);
+    background-color: var(--color-primary-blue);
     color: white;
-    border-color: var(--color-metropoles-red);
+    border-color: var(--color-primary-blue);
 }
 .button-header-primary:hover {
-    background-color: var(--color-metropoles-red-dark);
-    border-color: var(--color-metropoles-red-dark);
+    background-color: var(--color-primary-blue-dark);
+    border-color: var(--color-primary-blue-dark);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transform: translateY(-1px);
 }
 .button-header-primary:focus {
     outline: none;
-    border-color: var(--color-metropoles-red-dark);
-    box-shadow: 0 0 0 3px rgba(195, 36, 23, 0.6);
+    border-color: var(--color-primary-blue-dark);
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.6);
 }
 
 .button-header-secondary {
@@ -313,16 +293,16 @@ body {
     box-shadow: none;
     font-size: 1rem;
     border-radius: 0.4rem;
-    background-color: var(--color-metropoles-red);
+    background-color: var(--color-primary-blue);
     color: var(--color-sidebar-text);
 }
 .button-sidebar-filter:hover {
-    background-color: var(--color-metropoles-red-dark);
+    background-color: var(--color-primary-blue-dark);
     transform: translateY(-2px);
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 .button-sidebar-filter:focus {
-    box-shadow: 0 0 0 4px rgba(195, 36, 23, 0.5);
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.5);
 }
 
 .button-sidebar-clear {
@@ -379,8 +359,8 @@ body {
 }
 .input-field:focus {
     outline: none;
-    border-color: var(--color-metropoles-red);
-    box-shadow: 0 0 0 4px rgba(195, 36, 23, 0.4), inset 0 1px 4px rgba(0, 0, 0, 0.2);
+    border-color: var(--color-primary-blue);
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.4), inset 0 1px 4px rgba(0, 0, 0, 0.2);
     background-color: rgba(255, 255, 255, 0.25);
     color: var(--color-sidebar-text);
 }
@@ -475,7 +455,7 @@ select.input-field option {
     text-decoration: none;
     font-weight: 600;
     padding: 0.7rem 1.2rem;
-    background-color: var(--color-metropoles-red);
+    background-color: var(--color-primary-blue);
     color: white;
     border-radius: 0.5rem;
     text-align: center;
@@ -485,7 +465,7 @@ select.input-field option {
     box-shadow: var(--shadow-sm);
 }
 .news-card .read-more-link:hover {
-    background-color: var(--color-metropoles-red-dark);
+    background-color: var(--color-primary-blue-dark);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -505,53 +485,62 @@ footer {
     font-size: 0.875rem;
 }
 
-/* Media Queries (Ajustes para PC) */
+/* Media Queries (Ajustes para mobile) */
 @media (max-width: 1023px) {
     .sidebar {
         transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .app-container.sidebar-open .sidebar {
+        transform: translateX(0);
     }
     .close-sidebar {
-        display: none;
+        display: block; /* Mostra o botão de fechar no mobile */
+        font-size: 2rem;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: white;
     }
     .open-sidebar {
-        display: none;
+        display: block; /* Mostra o botão de abrir no mobile */
+        font-size: 1.5rem;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: var(--color-text-dark);
     }
     .main-content {
-        margin-left: 280px;
-        padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
+        padding-left: var(--spacing-unit); /* Ajusta o padding para mobile */
+        padding-right: var(--spacing-unit);
+        margin-left: 0;
     }
     .main-header {
-        flex-wrap: nowrap;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: stretch;
     }
     .logo-area, .header-buttons {
-        width: auto;
-        justify-content: flex-start;
+        width: 100%;
+        justify-content: center;
     }
     .header-buttons {
-        flex-direction: row;
-        gap: var(--spacing-unit);
+        flex-direction: column;
+        gap: 0.5rem;
     }
     .button-header-primary, .button-header-secondary {
-        width: auto;
+        width: 100%;
     }
     .site-title {
-        font-size: 2.8rem;
+        font-size: 2rem;
     }
-    .metropoles-logo {
-        height: 48px;
-    }
-
     .news-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: var(--spacing-unit);
+        grid-template-columns: 1fr;
     }
     .news-card h2 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     .news-card p.snippet {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 }

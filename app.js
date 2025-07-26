@@ -14,4 +14,4 @@ app.use(express.static('public'));
 
 app.use('/', newsRoutes);
 
-module.exports = app;
+module.exports = app; 
