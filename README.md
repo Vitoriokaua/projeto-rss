@@ -8,7 +8,7 @@
   </p>
 
   <p>
-    <img src="https://img.shields.io/badge/STATUS-CONCLUIDO-greem" alt="Status do Projeto" />
+    <img src="https://img.shields.io/badge/STATUS-CONCLUIDO-green" alt="Status do Projeto" />
   </p>
 </div>
 
@@ -26,9 +26,17 @@ API em JavaScript/NodeJs, implementada em Docker na AWS, para extrair informaç�
 
 ## 🌍 Site Escolhido
 
-| Fonte RSS | URL do RSS |
-| :--- | :--- |
-| **Metrópoles** | `https://www.metropoles.com/feed` |
+A fonte de dados para este projeto são os diversos feeds RSS categorizados oferecidos pelo portal [Canaltech](https://canaltech.com.br).
+
+### Categorias e URLs dos Feeds RSS
+
+| Categoria             | URL do Feed RSS                                      |
+|-----------------------|------------------------------------------------------|
+| Últimas Notícias      | [https://canaltech.com.br/rss/](https://canaltech.com.br/rss/)         |
+| Análises de Produtos  | [https://canaltech.com.br/rss/analises/](https://canaltech.com.br/rss/analises/) |
+| Mercado               | [https://canaltech.com.br/rss/mercado/](https://canaltech.com.br/rss/mercado/)   |
+| Ciência               | [https://canaltech.com.br/rss/ciencia/](https://canaltech.com.br/rss/ciencia/)   |
+
 
 ---
 
@@ -79,7 +87,7 @@ API em JavaScript/NodeJs, implementada em Docker na AWS, para extrair informaç�
 ---
 ## ✨ Funcionalidades
 
--  **Extração de Notícias:** Leitura de múltiplos feeds RSS categorizados do portal Metrópoles.
+-  **Extração de Notícias:** Leitura de múltiplos feeds RSS categorizados do portal Canaltech.
 -   **Armazenamento em Nuvem:** Persistência dos dados extraídos em arquivos `.json` individuais por categoria em um bucket na AWS S3.
 -   **API Robusta:** Exposição de endpoints para buscar/salvar, carregar e listar as categorias de notícias.
 -   **Interface Dinâmica:** Frontend que consome a API para popular um menu de filtros e exibir as notícias de forma organizada.
@@ -128,7 +136,7 @@ Para acessar e interagir com a aplicação, utilize o link principal abaixo.
     * **Rotas Incorretas:** A **Tabela de Rotas** principal não tinha uma rota padrão (`0.0.0.0/0`) que direcionasse o tráfego para o Internet Gateway.
     * **Sub-redes Privadas:** Descobrimos que todas as **sub-redes** padrão eram privadas e não atribuíam IP público automaticamente. A solução foi criar uma nova **sub-rede pública** do zero e configurá-la para atribuir IPs públicos e associá-la à tabela de rotas correta.
 
-4.  **Instabilidade do Feed RSS Externo:** A aplicação apresentava erros intermitentes de `parsing` (como `Non-whitespace before first tag`). Após uma análise dos logs, concluímos que o problema não era no nosso código, mas sim na instabilidade do feed RSS do portal de notícias escolhido.
+
 
 ---
 
